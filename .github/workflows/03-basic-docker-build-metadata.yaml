@@ -24,6 +24,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Docker Metadata
+        id: docker_meta
         uses: docker/metadata-action@v4
         with:
           images: patrykmitura/docker-ci-automotion-git-actions
